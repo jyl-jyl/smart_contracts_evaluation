@@ -1,0 +1,5 @@
+transferByPartition,constructor,,,1,,false
+transferByPartition,issueByPartition,instance,accounts[9] 5 94,1,,false
+transferByPartition,issueByPartition,instance,accounts[4] 5 55,1,,false
+transferByPartition,transferByPartition,instance,accounts[9] accounts[4] 5 28,1,,false
+transferByPartition,transferByPartition,instance,accounts[9] accounts[4] 5 5,1,,true

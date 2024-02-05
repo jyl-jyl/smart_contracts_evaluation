@@ -1,0 +1,3 @@
+bid,constructor,,accounts[1] 45,,,false
+bid,bid,instance,,1,212,false
+bid,bid,instance,,1,1114,true

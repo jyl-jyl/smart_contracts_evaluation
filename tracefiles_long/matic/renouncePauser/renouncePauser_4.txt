@@ -1,0 +1,5 @@
+renouncePauser,constructor,,365,7,,false
+renouncePauser,addPauser,instance,accounts[2],7,,false
+renouncePauser,renouncePauser,instance,,2,,false
+renouncePauser,addPauser,instance,accounts[0],7,,false
+renouncePauser,renouncePauser,instance,,0,,true

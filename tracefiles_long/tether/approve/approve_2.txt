@@ -1,0 +1,5 @@
+approve,constructor,,168,3,,false
+approve,issue,instance,485,3,,false
+approve,transfer,instance,accounts[6] 485,3,,false
+approve,approve,instance,accounts[7] 33,6,,false
+approve,approve,instance,accounts[2] 64,6,,true

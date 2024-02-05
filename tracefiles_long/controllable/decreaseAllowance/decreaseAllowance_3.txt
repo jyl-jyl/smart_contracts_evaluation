@@ -1,0 +1,5 @@
+decreaseAllowance,constructor,,accounts[2],1,,false
+decreaseAllowance,mint,instance,accounts[5] 562,,,false
+decreaseAllowance,approve,instance,accounts[8] 267,5,,false
+decreaseAllowance,decreaseAllowance,instance,accounts[8] 8,5,,false
+decreaseAllowance,decreaseAllowance,instance,accounts[8] 57,5,,true

@@ -1,0 +1,8 @@
+withdraw,constructor,,accounts[6] 52,0,,false
+withdraw,bid,instance,,3,483,false
+withdraw,bid,instance,,1,1440,false
+withdraw,bid,instance,,5,2288,false
+withdraw,increase,time,time.duration.seconds[53],,,false
+withdraw,endAuction,instance,,,,false
+withdraw,withdraw,instance,,3,,false
+withdraw,withdraw,instance,,1,,true

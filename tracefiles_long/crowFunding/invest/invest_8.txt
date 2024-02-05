@@ -1,0 +1,2 @@
+invest,constructor,,257 accounts[0],9,,false
+invest,invest,instance,,0,web3.utils.toWei(86 ether),true

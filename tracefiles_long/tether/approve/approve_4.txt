@@ -1,0 +1,5 @@
+approve,constructor,,184,9,,false
+approve,issue,instance,262,9,,false
+approve,transfer,instance,accounts[7] 262,9,,false
+approve,approve,instance,accounts[8] 77,7,,false
+approve,approve,instance,accounts[6] 122,7,,true

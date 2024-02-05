@@ -1,0 +1,3 @@
+mint,constructor,,1 2,,,false
+mint,mint,instance,428 7600103647682777,0,,false
+mint,mint,instance,704 7600103647682777,6,,true

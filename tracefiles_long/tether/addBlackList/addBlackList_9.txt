@@ -1,0 +1,3 @@
+addBlackList,constructor,,588,4,,false
+addBlackList,addBlackList,instance,accounts[9],4,,false
+addBlackList,addBlackList,instance,accounts[3],4,,true

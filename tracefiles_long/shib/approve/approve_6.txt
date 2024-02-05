@@ -1,0 +1,3 @@
+approve,constructor,,name symbol 18 818 accounts[5] accounts[4],3,,false
+approve,approve,instance,accounts[7] 82,8,,false
+approve,approve,instance,accounts[7] 374,8,,true
