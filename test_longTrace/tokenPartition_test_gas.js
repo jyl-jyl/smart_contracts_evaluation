@@ -16,7 +16,7 @@ const lowerBoundAmount = 10;
 const upperBoundAmount = 100;
 
 
-const testFolder = path.join(__dirname, `../../full/tracefiles_long/tokenPartition`);
+const testFolder = path.join(__dirname, `../tracefiles_long/tokenPartition`);
 // set up tests for contracts
 const testPath = path.join(testFolder, '/setup.txt');
 const setup = fs.readFileSync(testPath, 'utf-8');

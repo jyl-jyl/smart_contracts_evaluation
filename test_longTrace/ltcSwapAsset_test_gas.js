@@ -13,7 +13,7 @@ const path = require('path');
 const lowerBound = 10;
 const upperBound = 1000;
 
-const testFolder = path.join(__dirname, `../../full/tracefiles_long/ltcSwapAsset`);
+const testFolder = path.join(__dirname, `../tracefiles_long/ltcSwapAsset`);
 // set up tests for contracts
 const testPath = path.join(testFolder, '/setup.txt');
 const setup = fs.readFileSync(testPath, 'utf-8');

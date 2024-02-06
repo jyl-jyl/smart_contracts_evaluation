@@ -15,7 +15,7 @@ const timeUpperBound = 10;
 const durationLowerBound = 10;
 const durationUpperBound = 20;
 
-const testFolder = path.join(__dirname, `../../full/tracefiles_long/vestingWallet`);
+const testFolder = path.join(__dirname, `../tracefiles_long/vestingWallet`);
 // set up tests for contracts
 const testPath = path.join(testFolder, '/setup.txt');
 const setup = fs.readFileSync(testPath, 'utf-8');

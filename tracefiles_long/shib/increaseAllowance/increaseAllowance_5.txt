@@ -1,4 +1,4 @@
-increaseAllowance,constructor,,name symbol 18 108 accounts[6] accounts[9],,,false
-increaseAllowance,approve,instance,accounts[7] 55,9,,false
-increaseAllowance,increaseAllowance,instance,accounts[7] 73,9,,false
-increaseAllowance,increaseAllowance,instance,accounts[7] 139,9,,true
+increaseAllowance,constructor,,1 2 18 268 accounts[8] accounts[6],,,false
+increaseAllowance,approve,instance,accounts[3] 218,6,,false
+increaseAllowance,increaseAllowance,instance,accounts[3] 48,6,,false
+increaseAllowance,increaseAllowance,instance,accounts[3] 103,6,,true

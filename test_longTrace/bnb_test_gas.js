@@ -1,4 +1,3 @@
-const min_version = 'min_1';
 const {
   BN,           // Big Number support
   constants,    // Common constants, like the zero address and largest integers

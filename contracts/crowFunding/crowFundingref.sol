@@ -83,5 +83,5 @@ contract CrowFunding {
 }
 
 contract Deployer{
-    Crowdsale c = new Crowdsale(10000 * 10**18, address(0xDEADBEEF));
+    CrowFunding c = new CrowFunding(10000 * 10**18, address(0xDEADBEEF));
 }

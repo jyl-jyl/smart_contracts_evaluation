@@ -12,11 +12,11 @@ const path = require('path');
 
 const lowerBound = 10;
 const upperBound = 1000;
-const name = 'name';
-const symbol = 'symbol';
+const name = 1;
+const symbol = 2;
 const decimal = 18;
 
-const testFolder = path.join(__dirname, `../../full/tracefiles_long/shib`);
+const testFolder = path.join(__dirname, `../tracefiles_long/shib`);
 // set up tests for contracts
 const testPath = path.join(testFolder, '/setup.txt');
 const setup = fs.readFileSync(testPath, 'utf-8');
@@ -64,27 +64,6 @@ helper.range(transactionCounts).forEach(l => {
     }
   }
 
-  // if(transactionName == 'mint') {
-  //   tracefileCount = transactionCount;
-  //   helper.range(tracefileCount).forEach(testFileIndex => {
-  //     let fileName = `${transactionName}_${testFileIndex}.txt`;
-  //     let totalSupply = helper.random(lowerBound, upperBound+1);
-  //     let feeReceiverIndex = helper.random(0, deployAccountCount);
-  //     let tokenOwnerAddressIndex = helper.random(0, deployAccountCount);
-  //     let ownerIndex = helper.random(0, deployAccountCount);
-  //     let mintAccountIndex = helper.random(0, deployAccountCount);
-  //     let mintAmount_1 = helper.random(lowerBound, upperBound+1);
-  //     let mintAmount_2 = helper.random(lowerBound, upperBound+1);
-  //     let text = `mint,constructor,,${name} ${symbol} ${decimal} ${totalSupply} accounts[${feeReceiverIndex}] accounts[${tokenOwnerAddressIndex}],${ownerIndex},,false\nmint,mint,instance,accounts[${mintAccountIndex}] ${mintAmount_1},${ownerIndex},,false\nmint,mint,instance,accounts[${mintAccountIndex}] ${mintAmount_2},${ownerIndex},,true\n`;
-  //     if(!fs.existsSync(path.join(transactionFolderPath, fileName))) {
-  //       console.log('generating new tracefiles ...');
-  //       fs.writeFileSync(path.join(transactionFolderPath, fileName), text, function (err) {
-  //         if (err) throw err;
-  //         console.log('File is created successfully.');
-  //       });
-  //     }
-  //   }) 
-  // }
   if(transactionName == 'burn') {
     tracefileCount = transactionCount;
     helper.range(tracefileCount).forEach(testFileIndex => {
@@ -202,37 +181,7 @@ helper.range(transactionCounts).forEach(l => {
     }) 
   }  
 
-  // if(transactionName == 'burnFrom') {
-  //   tracefileCount = transactionCount;
-  //   helper.range(tracefileCount).forEach(testFileIndex => {
-  //     let fileName = `${transactionName}_${testFileIndex}.txt`;
-  //     let totalSupply = helper.random(lowerBound, upperBound+1);
-  //     let feeReceiverIndex = helper.random(0, deployAccountCount);
-  //     let tokenOwnerAddressIndex = helper.random(0, deployAccountCount);
-  //     let ownerIndex = helper.random(0, deployAccountCount);
-  //     let mintAccountIndex = helper.random(0, deployAccountCount);
-  //     let mintAmount = helper.random(lowerBound, upperBound+1);
-  //     let arrayRandom = [];
-  //     for (let appIndex = 0; appIndex < deployAccountCount; appIndex++) {
-  //       if(appIndex != mintAccountIndex) {
-  //         arrayRandom.push(appIndex);
-  //       }
-  //     }
-  //     let arrayRandomLen = arrayRandom.length;
-  //     let approveAccountIndex = arrayRandom[helper.random(0, arrayRandomLen)];
-  //     let approveAmount = helper.random(0, mintAmount+1);
-  //     let burnFromAmount = helper.random(0, approveAmount+1);
-  //     let mintApprovedAmount = approveAmount+100;
-  //     let text = `burnFrom,constructor,,${name} ${symbol} ${decimal} ${totalSupply} accounts[${feeReceiverIndex}] accounts[${tokenOwnerAddressIndex}],${ownerIndex},,false\nburnFrom,mint,instance,accounts[${mintAccountIndex}] ${mintAmount},${ownerIndex},,false\nburnFrom,approve,accounts[${approveAccountIndex}] ${approveAmount},${mintAccountIndex},,,false\nburnFrom,mint,instance,accounts[${approveAccountIndex}] ${mintApprovedAmount},${ownerIndex},,false\nburnFrom,burnFrom,instance,accounts[${approveAccountIndex}] ${burnFromAmount},${mintAccountIndex},,true\n`;
-  //     if(!fs.existsSync(path.join(transactionFolderPath, fileName))) {
-  //       console.log('generating new tracefiles ...');
-  //       fs.writeFileSync(path.join(transactionFolderPath, fileName), text, function (err) {
-  //         if (err) throw err;
-  //         console.log('File is created successfully.');
-  //       });
-  //     }
-  //   }) 
-  // }
+
   if(transactionName == 'increaseAllowance') {
     tracefileCount = transactionCount;
     helper.range(tracefileCount).forEach(testFileIndex => {
@@ -293,13 +242,6 @@ helper.range(transactionCounts).forEach(l => {
       }
     }) 
   }
-
-
-
-
-
-
-    
 
 
 })

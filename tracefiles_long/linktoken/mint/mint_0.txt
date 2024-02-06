@@ -1,3 +1,0 @@
-mint,constructor,,976,7,,false
-mint,mint,instance,accounts[1] 933,7,,false
-mint,mint,instance,accounts[1] 250,7,,true

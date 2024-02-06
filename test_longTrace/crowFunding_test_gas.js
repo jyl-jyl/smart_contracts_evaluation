@@ -14,7 +14,7 @@ const durationUpperBound = 1000;
 const investAmountLowerBound = 10;
 const investAmountUpperBound = 100;
 
-const testFolder = path.join(__dirname, `../../full/tracefiles_long/crowdsale`);
+const testFolder = path.join(__dirname, `../tracefiles_long/crowFunding`);
 // set up tests for contracts
 const testPath = path.join(testFolder, '/setup.txt');
 const setup = fs.readFileSync(testPath, 'utf-8');
