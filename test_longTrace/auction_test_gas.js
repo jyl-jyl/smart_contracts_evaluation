@@ -72,10 +72,13 @@ helper.range(transactionCounts).forEach(l => {
       let biddingVal_1 = helper.random(BiddingValLowerBound, BiddingValUpperBound+1); 
       let biddingVal_2 = biddingVal_1 + helper.random(BiddingValLowerBound, BiddingValUpperBound+1);    
       let text = `bid,constructor,,accounts[${beneficiary}] ${biddingTime},,,false\nbid,bid,instance,,${bidFromAccountIndex},${biddingVal_1},false\nbid,bid,instance,,${bidFromAccountIndex},${biddingVal_2},true\n`;
-      fs.writeFileSync(path.join(transactionFolderPath, fileName), text, function (err) {
-        if (err) throw err;
-        console.log('File is created successfully.');
-      });
+      if(!fs.existsSync(path.join(transactionFolderPath, fileName))) {
+        console.log('generating new tracefiles ...');
+        fs.writeFileSync(path.join(transactionFolderPath, fileName), text, function (err) {
+          if (err) throw err;
+          console.log('File is created successfully.');
+        });
+      }
     }) 
   }
   // failed
@@ -102,10 +105,13 @@ helper.range(transactionCounts).forEach(l => {
       let bidFromAccountIndex_3 = arrayRandom[helper.random(0, arrayRandomLen)];
       let biddingVal_3 = biddingVal_1 + biddingVal_2 + helper.random(0, BiddingValUpperBound+1); 
       let text = `withdraw,constructor,,accounts[${beneficiary}] ${biddingTime},0,,false\nwithdraw,bid,instance,,${bidFromAccountIndex_1},${biddingVal_1},false\nwithdraw,bid,instance,,${bidFromAccountIndex_2},${biddingVal_2},false\nwithdraw,bid,instance,,${bidFromAccountIndex_3},${biddingVal_3},false\nwithdraw,increase,time,time.duration.seconds[${biddingTime+1}],,,false\nwithdraw,endAuction,instance,,,,false\nwithdraw,withdraw,instance,,${bidFromAccountIndex_1},,false\nwithdraw,withdraw,instance,,${bidFromAccountIndex_2},,true\n`;
-      fs.writeFileSync(path.join(transactionFolderPath, fileName), text, function (err) {
-        if (err) throw err;
-        console.log('File is created successfully.');
-      });
+      if(!fs.existsSync(path.join(transactionFolderPath, fileName))) {
+        console.log('generating new tracefiles ...');
+        fs.writeFileSync(path.join(transactionFolderPath, fileName), text, function (err) {
+          if (err) throw err;
+          console.log('File is created successfully.');
+        });
+      }
     })  
   }  
 
@@ -117,10 +123,13 @@ helper.range(transactionCounts).forEach(l => {
       let biddingTime = helper.random(autionTimeLowerBound, autionTimeUpperBound+1);
       let beneficiary = helper.random(0, deployAccountCount);
       let text = `endAuction,constructor,,accounts[${beneficiary}] ${biddingTime},,,false\nendAuction,increase,time,time.duration.seconds[${biddingTime+1}],,,false\nendAuction,endAuction,instance,,,,true\n`;
-      fs.writeFileSync(path.join(transactionFolderPath, fileName), text, function (err) {
-        if (err) throw err;
-        console.log('File is created successfully.');
-      });
+      if(!fs.existsSync(path.join(transactionFolderPath, fileName))) {
+        console.log('generating new tracefiles ...');
+        fs.writeFileSync(path.join(transactionFolderPath, fileName), text, function (err) {
+          if (err) throw err;
+          console.log('File is created successfully.');
+        });
+      }
     }) 
   }
 })

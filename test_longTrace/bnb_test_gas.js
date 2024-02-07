@@ -238,26 +238,6 @@ helper.range(transactionCounts).forEach(l => {
     })   
   }  
 
-//   if(transactionName == 'mint') {
-//     tracefileCount = transactionCount;
-//     helper.range(tracefileCount).forEach(testFileIndex => {
-//       // construct file name
-//       let fileName = `${transactionName}_${testFileIndex}.txt`
-//       let owner = helper.random(0, deployAccountCount);
-//       let totalSupply = helper.random(lowerBoundInput, upperBoundInput+1);
-//       let mintAmount_1 = helper.random(lowerBoundInput, upperBoundInput+1);
-//       let mintAmount_2 = helper.random(lowerBoundInput, upperBoundInput+1);
-//       let mintAccountIndex = helper.random(0, deployAccountCount);
-//       let text = `mint,constructor,,${totalSupply},${owner},,false\nmint,mint,instance,accounts[${mintAccountIndex}] ${mintAmount_1},${owner},,false\nmint,mint,instance,accounts[${mintAccountIndex}] ${mintAmount_2},${owner},,true\n`;
-//       if(!fs.existsSync(path.join(transactionFolderPath, fileName))) {
-//         console.log('generating new tracefiles ...');
-//         fs.writeFileSync(path.join(transactionFolderPath, fileName), text, function (err) {
-//           if (err) throw err;
-//           console.log('File is created successfully.');
-//         });
-//       }
-//     })   
-//   }
 })
 
 helper.runTests(transactionCounts, transactionFolders, testFolder, contractName, min_version);

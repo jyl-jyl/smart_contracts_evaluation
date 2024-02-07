@@ -35,7 +35,13 @@ do
 	# run test
 	truffle test "./test_longTrace/${bm}_test_gas.js" --compile-none
 	# delete the first line of the test file
-	sed -i '' 1d "${file}"
+	if [[ $(uname) == "Darwin" ]]; then
+    	# macOS (BSD sed)
+    	sed -i '' 1d "${file}"
+	elif [[ $(uname) == "Linux" ]]; then
+    	# Linux (GNU sed)
+    	sed -i 1d "${file}"
+    fi
 done
 
 

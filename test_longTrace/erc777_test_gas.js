@@ -254,36 +254,7 @@ helper.range(transactionCounts).forEach(l => {
       }
     }) 
   }    
-
-  // if(transactionName == 'send') {
-  //   tracefileCount = transactionCount;
-  //   helper.range(tracefileCount).forEach(testFileIndex => {
-  //     let fileName = `${transactionName}_${testFileIndex}.txt`;
-  //     let mintMsgSender = helper.random(0, deployAccountCount);
-  //     let mintAccountIndex = helper.random(0, deployAccountCount);
-  //     let mintAmount = helper.random(mintLowerBound, mintUpperBound+1);
-  //     let mintUserData = helper.random(dataLowerBound, dataUpperBound);
-  //     let mintOperatorData = helper.random(dataLowerBound, dataUpperBound);
-  //     let arrayRandom = [];
-  //     for (let appIndex = 0; appIndex < deployAccountCount; appIndex++) {
-  //       if(appIndex != mintAccountIndex) {
-  //         arrayRandom.push(appIndex);
-  //       }
-  //     }
-  //     let arrayRandomLen = arrayRandom.length;
-  //     let sendAccountIndex = arrayRandom[helper.random(0, arrayRandomLen)];
-  //     let sendAmount = helper.random(0, mintAmount+1);
-  //     let sendData = helper.random(dataLowerBound, dataUpperBound);
-  //     let text = `send,constructor,,${name} ${symbol} emptyArr,,,false\nsend,mint,instance,accounts[${mintAccountIndex}] ${mintAmount} ${mintUserData} ${mintOperatorData},${mintMsgSender},,false\nsend,send,instance,accounts[${sendAccountIndex}] ${sendAmount} ${sendData},${mintAccountIndex},,true\n`;
-  //     fs.writeFileSync(path.join(transactionFolderPath, fileName), text, function (err) {
-  //       if (err) throw err;
-  //       console.log('File is created successfully.');
-  //     });
-  //   }) 
-  // }  
-
-
-   if(transactionName == 'transfer') {
+  if(transactionName == 'transfer') {
     tracefileCount = transactionCount;
     helper.range(tracefileCount).forEach(testFileIndex => {
       let fileName = `${transactionName}_${testFileIndex}.txt`;
